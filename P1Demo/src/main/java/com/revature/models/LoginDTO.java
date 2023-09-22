@@ -1,5 +1,6 @@
 package com.revature.models;
 
+//Refresher - a DTO is a data transfer object. it's meant for transfer of data that won't be stored in DB
 public class LoginDTO {
 
     private String username;

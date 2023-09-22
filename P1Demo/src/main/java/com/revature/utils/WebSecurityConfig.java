@@ -21,6 +21,8 @@ import javax.servlet.http.HttpServletResponse;
 /*
 This class extends the WebSecurityConfigurerAdapter.
 It's a convenience class that allows customization to both WebSecurity and HttpSecurity.
+
+This Util Class will define a couple things like password encryption and which routes need JWTs to access
  */
 
 @EnableWebSecurity
@@ -58,10 +60,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
+        //here's the actual code that allows/restricts access to different endpoints/controllers
         http.authorizeRequests()
                 .antMatchers("/auth").permitAll()
                 .anyRequest().authenticated();
-        //TODO: change request auth configs after making new user with encrypted password
+
 
         http.exceptionHandling()
                 .authenticationEntryPoint(

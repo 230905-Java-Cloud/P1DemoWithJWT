@@ -11,7 +11,7 @@ import java.util.Collection;
 @Table(name = "employees") //This lets us give the DB table a different name (and other properties)
 @Component //This is one of the 4 stereotype annotations
 //A stereotype annotation makes a class a bean (so it can inject dependencies and be injected as a dep.)
-public class Employee implements UserDetails {
+public class Employee implements UserDetails{
 
     @Id //This will make this field the primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY) //This makes our PK serial

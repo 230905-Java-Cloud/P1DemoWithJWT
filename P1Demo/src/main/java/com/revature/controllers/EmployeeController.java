@@ -23,11 +23,12 @@ public class EmployeeController {
     private EmployeeService es;
     private PasswordEncoder passwordEncoder; //SPRING SECURITY - lets us encode our passwords
 
+
     @Autowired //remember, spring boot will automagically inject an eDAO thanks to this annotation
-    public EmployeeController(EmployeeDAO eDAO, EmployeeService es, PasswordEncoder ps) {
+    public EmployeeController(EmployeeDAO eDAO, EmployeeService es, PasswordEncoder passwordEncoder) {
         this.eDAO = eDAO;
         this.es = es;
-        this.passwordEncoder = ps;
+        this.passwordEncoder = passwordEncoder;
     }
 
     //HTTP REQUESTS--------------------------

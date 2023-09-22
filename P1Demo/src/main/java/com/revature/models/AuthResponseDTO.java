@@ -1,5 +1,6 @@
 package com.revature.models;
 
+//This DTO will send back the username or the user that logged in, as well as the JWT accessToken
 public class AuthResponseDTO {
 
     private String username;

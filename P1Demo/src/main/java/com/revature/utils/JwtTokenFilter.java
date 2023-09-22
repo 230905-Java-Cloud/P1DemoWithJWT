@@ -17,9 +17,11 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+//This Util Class will make sure the requests hitting our server have a JWT in the Authorization header
+
 @Component //OncePerRequestFilter guarantees a single execution per request.
 public class JwtTokenFilter extends OncePerRequestFilter {
-    @Autowired
+    @Autowired //FIELD INJECTION BAD!
     private JwtTokenUtil jwtUtil;
 
     @Override

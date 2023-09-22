@@ -19,7 +19,6 @@ Once the appropriate Role is found, it's simply a matter of using setRole() on t
 
  */
 
-
 @Repository
 public interface RoleDAO extends JpaRepository<Role, Integer> {
 }
